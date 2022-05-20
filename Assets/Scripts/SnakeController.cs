@@ -14,19 +14,19 @@ public class SnakeController : MonoBehaviour
     private bool IsAlive;
     public GameObject GameOverVanvas;
 
-
-
     private Vector2 emptySpace;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+   
     private void Start()
     {
         if (IsAlive)
         StartCoroutine(Move());
         v2 = new Vector2();
+        
     }
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -47,7 +47,6 @@ public class SnakeController : MonoBehaviour
         yield return new WaitForSeconds(timeBeforeMove);
            
     }
-
 
     private void Die()
     {
