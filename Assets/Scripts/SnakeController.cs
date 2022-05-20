@@ -12,6 +12,9 @@ public class SnakeController : MonoBehaviour
     public float timeBeforeMove;
     private Rigidbody2D rb;
     private bool IsAlive;
+    public GameObject GameOverVanvas;
+
+
 
     private Vector2 emptySpace;
 
@@ -43,5 +46,13 @@ public class SnakeController : MonoBehaviour
 
         yield return new WaitForSeconds(timeBeforeMove);
            
+    }
+
+
+    private void Die()
+    {
+        if (!IsAlive)
+            return;
+     
     }
 }
